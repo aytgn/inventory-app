@@ -1,3 +1,9 @@
 <div class="container">
-  <app-product-card></app-product-card>
+  <div class="productCardContainer" *ngFor="let product of products">
+    <app-product-card
+      [product]="product"
+      (click)="onClick(product)"
+      [ngClass]="{ selected: true }"
+    ></app-product-card>
+  </div>
 </div>

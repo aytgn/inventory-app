@@ -2,18 +2,22 @@
   <div class="row d-flex align-items-center justify-content-center gx-4 mt-4">
     <div class="col-3 g-0">
       <div class="myImgContainer">
-        <img [src]="'../../assets/shoes.png'" class="myImage" />
+        <img [src]="product.imgPath" class="myImage" />
       </div>
     </div>
     <div class="col-7 px-3">
-      <div class="titleContainer pb-3"><h4>Red Shoes</h4></div>
-      <div class="infoContainer pb-5">
-        <h5>Beautiful red shoes to play soccer by Nike</h5>
+      <div class="titleContainer pb-3">
+        <h4>{{ product.title }}</h4>
       </div>
-      <div class="departmanContainer">Sport>Shoes>Soccer</div>
+      <div class="infoContainer pb-5">
+        <h5>{{ product.info }}</h5>
+      </div>
+      <div class="departmanContainer">{{ product.department }}</div>
     </div>
     <div class="col-2 pt-2 align-self-start">
-      <div class="priceContainer"><h5>$100</h5></div>
+      <div class="priceContainer">
+        <h5>${{ product.price }}</h5>
+      </div>
     </div>
   </div>
 </div>

@@ -1,4 +1,8 @@
 <app-navbar></app-navbar>
 <div class="myAppContainer">
-  <app-product-list></app-product-list>
+  <app-product-list
+    [products]="products"
+    (onSelected)="productSelected($event)"
+    [selectedProduct]="selectedProduct"
+  ></app-product-list>
 </div>
