@@ -10,9 +10,11 @@ import { Product } from './product.model';
 export class ProductListComponent implements OnInit {
   @Input() products: Product[];
   @Input() selectedProduct: Product;
+  @Input() borderColor: string;
   @Output() onSelected: EventEmitter<Product>;
 
   constructor() {
+    this.borderColor = 'green';
     this.products = [];
     this.selectedProduct = {
       title: '',

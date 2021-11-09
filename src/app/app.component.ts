@@ -9,15 +9,17 @@ import { Product } from './product-list/product.model';
 export class AppComponent {
   products: Product[];
   selectedProduct: Product;
+  borderColor: string;
 
   constructor() {
-    this.selectedProduct = {
-      department: '',
-      imgPath: '',
-      info: '',
-      price: 0,
-      title: '',
-    };
+    (this.borderColor = 'red'),
+      (this.selectedProduct = {
+        department: '',
+        imgPath: '',
+        info: '',
+        price: 0,
+        title: '',
+      });
     this.products = [
       new Product(
         'Red Shoes',
@@ -34,7 +36,7 @@ export class AppComponent {
         '/assets/blue-jacket.jfif'
       ),
       new Product(
-        'NICEHAT',
+        'NICE HAT',
         'A Nice Black Hat',
         '',
         29.99,
@@ -45,5 +47,9 @@ export class AppComponent {
 
   productSelected(product: Product) {
     this.selectedProduct = product;
+  }
+
+  onClick(newBorderColor: string) {
+    this.borderColor = newBorderColor;
   }
 }

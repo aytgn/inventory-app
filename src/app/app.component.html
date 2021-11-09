@@ -4,5 +4,16 @@
     [products]="products"
     (onSelected)="productSelected($event)"
     [selectedProduct]="selectedProduct"
+    [borderColor]="borderColor"
   ></app-product-list>
+  <br />
+  <hr />
+  <div class="container fluid d-flex justify-content-center">
+    <input type="text" #newBorderColor />
+    <button type="button" (click)="onClick(newBorderColor.value)">
+      Change Color
+    </button>
+  </div>
+  <br />
+  <br />
 </div>

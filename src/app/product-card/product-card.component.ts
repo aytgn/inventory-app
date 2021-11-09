@@ -8,8 +8,10 @@ import { Product } from '../product-list/product.model';
 })
 export class ProductCardComponent implements OnInit {
   @Input() isSelected: boolean = false;
+  @Input() borderColor: string;
 
   constructor() {
+    this.borderColor = '';
     this.product = {
       title: 'Red Shoes',
       info: 'Beautiful red shoes to play soccer by Nike',
