@@ -26,6 +26,16 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  isSelected(product: Product) {
+    if (!this.selectedProduct || !product) {
+      return false;
+    } else {
+      if (product == this.selectedProduct) {
+        return true;
+      } else return false;
+    }
+  }
+
   onClick(product: Product) {
     this.onSelected.emit(product);
   }

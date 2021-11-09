@@ -44,6 +44,6 @@ export class AppComponent {
   }
 
   productSelected(product: Product) {
-    console.log(product);
+    this.selectedProduct = product;
   }
 }

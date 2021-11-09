@@ -7,6 +7,8 @@ import { Product } from '../product-list/product.model';
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
+  @Input() isSelected: boolean = false;
+
   constructor() {
     this.product = {
       title: 'Red Shoes',

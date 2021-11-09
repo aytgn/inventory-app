@@ -3,7 +3,7 @@
     <app-product-card
       [product]="product"
       (click)="onClick(product)"
-      [ngClass]="{ selected: true }"
+      [isSelected]="isSelected(product)"
     ></app-product-card>
   </div>
 </div>
